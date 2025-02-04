@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfw4m84umeox5"]
+
+[ext_resource type="Script" path="res://scripts/birds/kickboxing_crow.gd" id="1_tmwy7"]
+[ext_resource type="Texture2D" uid="uid://ut818ang7g38" path="res://images/card_base.png" id="2_y70ca"]
+[ext_resource type="Texture2D" uid="uid://fxfaxk121ixt" path="res://images/health.png" id="3_olfsi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p60xx"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[node name="Card" type="Area2D"]
+script = ExtResource("1_tmwy7")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.814)
+texture = ExtResource("2_y70ca")
+
+[node name="Health Icon" type="Sprite2D" parent="."]
+position = Vector2(127, -195)
+scale = Vector2(0.0679347, 0.0679348)
+texture = ExtResource("3_olfsi")
+
+[node name="Health Label" type="Label" parent="."]
+offset_left = 42.0
+offset_top = -213.0
+offset_right = 101.0
+offset_bottom = -174.0
+label_settings = SubResource("LabelSettings_p60xx")
+horizontal_alignment = 2
+
+[node name="Name Label" type="Label" parent="."]
+offset_left = -109.0
+offset_top = -210.0
+offset_right = 62.0
+offset_bottom = -171.0
+label_settings = SubResource("LabelSettings_p60xx")
