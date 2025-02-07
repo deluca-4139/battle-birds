@@ -3,8 +3,7 @@ class_name Move # do we need extends Node here?
 var name: String
 var description: String
 # var effects := [] # Should be populated with Effects
-var is_single_use: bool = false
-var has_been_used: bool = false # Only relevant if is_single_use is true; is there a better way to do this?
+var uses: int = -1 # -1 is the value for infinite uses
 
 
 func _init() -> void: 
