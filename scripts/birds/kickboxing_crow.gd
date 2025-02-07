@@ -7,9 +7,9 @@ func _ready() -> void:
 	health = 8
 	type = [Types.SUMO, Types.AWESOME]
 	moves = [
-		Moves.mega_kick.new(),
+		Moves.g_single_target.new("Mega Kick", 4),
 		Moves.roundhouse_kick.new(),
-		Moves.uppercut_kick.new()
+		Moves.g_single_target.new("Uppercut Kick", 8, 1)
 	]
 	
 	super._ready() # Required for parent Card instantiation func to run, but could be unnecessary
