@@ -20,6 +20,9 @@ position = Vector2(127, -195)
 scale = Vector2(0.0679347, 0.0679348)
 texture = ExtResource("3_olfsi")
 
+[node name="Artwork" type="Sprite2D" parent="."]
+position = Vector2(0, -102)
+
 [node name="Health Label" type="Label" parent="."]
 offset_left = 42.0
 offset_top = -213.0
@@ -34,3 +37,11 @@ offset_top = -210.0
 offset_right = 62.0
 offset_bottom = -171.0
 label_settings = SubResource("LabelSettings_p60xx")
+
+[node name="Card Selection Border" type="Line2D" parent="."]
+visible = false
+position = Vector2(-170, -230)
+points = PackedVector2Array(0, 0, 340, 0, 340, 460, 0, 460)
+closed = true
+width = 5.0
+default_color = Color(0.49, 0.728, 1, 1)

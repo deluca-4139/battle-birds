@@ -4,6 +4,7 @@ var Moves = load("res://scripts/moves.gd")
 
 func _ready() -> void:
 	card_name = "Kickboxing Crow"
+	artwork_path = "res://images/kickboxing_crow_display.png"
 	health = 8
 	type = [Types.SUMO, Types.AWESOME]
 	moves = [

@@ -1,8 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcevl5geiyx3a"]
+[gd_scene load_steps=3 format=3 uid="uid://bcevl5geiyx3a"]
 
 [ext_resource type="PackedScene" uid="uid://cfw4m84umeox5" path="res://scenes/card.tscn" id="1_c6bry"]
+[ext_resource type="Script" path="res://scripts/cancel_button.gd" id="2_6nsua"]
 
 [node name="Board" type="Node2D"]
 
 [node name="Card" parent="." instance=ExtResource("1_c6bry")]
-position = Vector2(605, 380)
+position = Vector2(605, 534)
+scale = Vector2(0.75, 0.75)
+
+[node name="Card2" parent="." instance=ExtResource("1_c6bry")]
+position = Vector2(453, 187)
+scale = Vector2(0.5, 0.5)
+
+[node name="Card3" parent="." instance=ExtResource("1_c6bry")]
+position = Vector2(750, 190)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cancel Button" type="Button" parent="."]
+visible = false
+offset_left = 947.0
+offset_top = 528.0
+offset_right = 1007.0
+offset_bottom = 559.0
+text = "Cancel"
+script = ExtResource("2_6nsua")
