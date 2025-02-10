@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfw4m84umeox5"]
+[gd_scene load_steps=7 format=3 uid="uid://cfw4m84umeox5"]
 
 [ext_resource type="Script" path="res://scripts/birds/kickboxing_crow.gd" id="1_tmwy7"]
+[ext_resource type="Script" path="res://scenes/card_selection.gd" id="2_wa3q2"]
 [ext_resource type="Texture2D" uid="uid://ut818ang7g38" path="res://images/card_base.png" id="2_y70ca"]
 [ext_resource type="Texture2D" uid="uid://fxfaxk121ixt" path="res://images/health.png" id="3_olfsi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmw84"]
+size = Vector2(344, 464)
 
 [sub_resource type="LabelSettings" id="LabelSettings_p60xx"]
 font_size = 22
@@ -10,6 +14,26 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Card" type="Area2D"]
 script = ExtResource("1_tmwy7")
+
+[node name="Card Selection" type="Area2D" parent="."]
+script = ExtResource("2_wa3q2")
+
+[node name="Collision" type="CollisionShape2D" parent="Card Selection"]
+shape = SubResource("RectangleShape2D_mmw84")
+
+[node name="Border" type="Line2D" parent="Card Selection"]
+visible = false
+position = Vector2(-170, -230)
+points = PackedVector2Array(0, 0, 340, 0, 340, 460, 0, 460)
+closed = true
+width = 5.0
+default_color = Color(0.49, 0.728, 1, 1)
+
+[node name="Background" type="Polygon2D" parent="Card Selection"]
+visible = false
+modulate = Color(0.46, 0.712, 1, 0.576471)
+position = Vector2(-170, -230)
+polygon = PackedVector2Array(0, 0, 340, 0, 340, 460, 0, 460)
 
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(0.75, 0.814)
@@ -37,11 +61,3 @@ offset_top = -210.0
 offset_right = 62.0
 offset_bottom = -171.0
 label_settings = SubResource("LabelSettings_p60xx")
-
-[node name="Card Selection Border" type="Line2D" parent="."]
-visible = false
-position = Vector2(-170, -230)
-points = PackedVector2Array(0, 0, 340, 0, 340, 460, 0, 460)
-closed = true
-width = 5.0
-default_color = Color(0.49, 0.728, 1, 1)

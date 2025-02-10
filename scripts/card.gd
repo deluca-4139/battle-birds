@@ -46,10 +46,6 @@ func construct_button(move: Move, x: float, y: float) -> Button:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Set up signals
-	SignalBus.move_select_card.connect(_on_move_select_card)
-	SignalBus.cancel_button_pressed.connect(_on_cancel_button_pressed)
-	
 	# Set up artwork
 	$Artwork.texture = load(artwork_path)
 	$Artwork.scale = Vector2(0.1, 0.11) # how do we determine this programatically? how do we scale sprite separately from region?
@@ -73,12 +69,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-func _on_move_select_card(selecting_card: String) -> void:
-	if selecting_card == self.name:
-		return
-	
-	$'Card Selection Border'.visible = true
-	
-func _on_cancel_button_pressed() -> void:
-	$'Card Selection Border'.visible = false
