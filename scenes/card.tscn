@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cfw4m84umeox5"]
 
 [ext_resource type="Script" path="res://scripts/birds/kickboxing_crow.gd" id="1_tmwy7"]
-[ext_resource type="Script" path="res://scenes/card_selection.gd" id="2_wa3q2"]
+[ext_resource type="Script" path="res://scripts/card_selection.gd" id="2_wa3q2"]
 [ext_resource type="Texture2D" uid="uid://ut818ang7g38" path="res://images/card_base.png" id="2_y70ca"]
 [ext_resource type="Texture2D" uid="uid://fxfaxk121ixt" path="res://images/health.png" id="3_olfsi"]
 
